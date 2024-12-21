@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>User Form</title>
+</head>
+<body>
+    <h1>Check Even or ODD Number</h1>
+    
+    <form method="post">
+        {% if error %} 
+        <div>
+            <span style="color: red;">please enter the value</span>
+
+        </div>
+        <br>
+        <br>
+        {% endif %}
+        {% csrf_token %}
+        <label> Input Number</label>
+        <input type = "text" name = "num1">
+
+        <br><br>
+        <br>
+
+        
+        <button type="submit">EvenODD</button>
+        <br>
+
+        <label> Output</label>
+        <input type = "text" value = {{c}}>
+
+
+    </form>

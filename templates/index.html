@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+
+    
+    <style>
+      .main {
+        width: 85px;
+        background-color: red;hjljlklhjgh
+      }
+      .marquee {
+        width: 100%;
+        color: blue;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .marquee.a{
+        color : white;
+        font-weight :bold;
+      }
+    </style>
+  </head>
+  <body>
+    
+    {% comment %} <marquee class="marquee" onmouseover="stop()" onmouseout="start()">
+      {% for news in newsData %}
+      <a href=''> {{news.news_title}} </a>
+      {% endfor %}
+    </marquee> {% endcomment %}
+    <div class="main">Hii {{ Name }}</div>
+    {% for i in Clist %}
+      <div>{{ i }}</div>
+    {% endfor %}
+
+    <h1>Welcome to the Index Page</h1>
+    <p>This is the main page of your Django application.</p>
+    <table border="1px">
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+      </tr>
+      {% for i in Details %}
+        <tr>
+          <td>{{ i.name }}</td>
+          <td>{{ i.city }}</td>
+        </tr>
+      {% endfor %}
+
+      {% if numbers|length > 0 %}
+        {% for n in numbers %}
+          {% if n >= 60 %}
+            <div>{{ n }}</div>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        no data found
+      {% endif %}
+    </table>
+    {% for i in serviceData %}
+      <div>"{{i.first_name}}" </div>
+      {% endfor %}
+  </body>
+</html>

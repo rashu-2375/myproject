@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+</head>
+<body>
+    <h1>Submit Your Information</h1>
+    
+    <form method="post" action="/submitform/">
+        {% csrf_token %}
+        {{form}}
+        <div>
+            <label for="">Value1:</label>
+            <input type="text" name="num1" value = "{{n1}}"required><br><br>
+        </div>
+        <div>
+            <label for="">Value2:</label>
+            <input type="text" name="num2" value = "{{n2}}" required><br><br>
+        </div> 
+
+        <div>
+            <button type="submit">Save</button>
+        </div>
+        
+        output
+        <input type="text" value="{{output}}"/><br><br>
+        
+
+    </form>
+</body>
+</html>
+
